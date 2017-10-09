@@ -1,15 +1,14 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <ol>
-      <li>
-        <router-link to='/hello'>to hello</router-link><br/>
-      </li>
-      <li>
-        <router-link to='/test'> to test</router-link><br/>
-      </li>
-    </ol>
-    <router-view></router-view>
+    <el-row :gutter="20">
+      <el-col :span='4'>
+        <router-view name='sidebar'></router-view>
+      </el-col>
+      <el-col :span='20'>
+        <router-link to='/grid'>grid</router-link>
+        <router-view></router-view>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
